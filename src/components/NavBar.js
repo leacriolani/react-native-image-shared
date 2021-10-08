@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ShareImage from "./ShareImage";
 import Home from "./Home";
 import TakePhoto from "./TakePhoto";
+import ShowPhoto from "./ShowPhoto";
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +34,14 @@ function App() {
             component={TakePhoto} 
             options={{
                 title: 'Take a Photo'
+            }}
+        />
+        <Stack.Screen 
+            name="ShowPhoto" 
+            component={ShowPhoto}
+            options={{
+                title: 'New Picture',
+                headerBackTitle: 'New'
             }}
         />
       </Stack.Navigator>

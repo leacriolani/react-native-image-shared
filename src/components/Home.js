@@ -15,7 +15,7 @@ const Home = function ({ navigation }) {
         style={styles.button}
         onPress={() => navigation.navigate("TakePhoto")}
       >
-        <Text style={styles.title}>Text Photo</Text>
+        <Text style={styles.title}>Take a Photo</Text>
       </TouchableOpacity>
     </View>
   );
