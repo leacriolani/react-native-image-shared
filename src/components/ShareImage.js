@@ -1,5 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
+import * as ImagePicker from "expo-image-picker";
+import * as Sharing from "expo-sharing"
 import {
   StyleSheet,
   Text,
@@ -8,10 +10,8 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import * as ImagePicker from "expo-image-picker";
-import * as Sharing from "expo-sharing"
 
-export default function App() {
+const ShareImage = function() {
   const [selectedImage, setSelectedImage] = React.useState(null);
 
   let OperImagePickerAsync = async () => {
@@ -77,6 +77,8 @@ export default function App() {
   );
 }
 
+export default ShareImage;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -116,3 +118,5 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   }
 });
+
+
